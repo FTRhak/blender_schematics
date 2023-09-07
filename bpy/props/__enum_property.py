@@ -1,0 +1,2 @@
+class EnumProperty():
+    pass

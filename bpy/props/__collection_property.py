@@ -1,0 +1,2 @@
+class CollectionProperty():
+    pass

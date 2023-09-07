@@ -1,24 +1,27 @@
+from typing import Literal, Type
 from id import ID
+from object import Object
+from anim_data import AnimData
 from mathutils import Vector, Matrix
 
 # https://docs.blender.org/api/current/bpy.types.Curve.html
 
 class Curve(ID):
-    animation_data: any
+    animation_data: AnimData
     bevel_depth: float
     bevel_factor_end: float
-    bevel_factor_mapping_end: any
-    bevel_factor_mapping_start: any
+    bevel_factor_mapping_end: Literal['RESOLUTION', 'SEGMENTS', 'SPLINE']
+    bevel_factor_mapping_start: Literal['RESOLUTION', 'SEGMENTS', 'SPLINE']
     bevel_factor_start: float
-    bevel_mode: any
-    bevel_object: any
+    bevel_mode: Literal['ROUND', 'OBJECT', 'PROFILE']
+    bevel_object: Object
     bevel_profile: any
     bevel_resolution: int
     cycles: any
-    dimensions: str
+    dimensions: Literal['2D', '3D']
     eval_time: float
     extrude: float
-    fill_mode: str
+    fill_mode: Literal['FULL', 'BACK', 'FRONT', 'HALF']
     is_editmode: bool
     materials: any
     offset: float
@@ -30,7 +33,7 @@ class Curve(ID):
     shape_keys: any
     splines: any
     taper_object: any
-    taper_radius_mode: str
+    taper_radius_mode: Literal['OVERRIDE', 'MULTIPLY', 'ADD']
     texspace_location:Vector
     texspace_size: Vector
     twist_mode: str

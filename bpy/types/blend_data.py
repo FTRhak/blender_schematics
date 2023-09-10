@@ -1,6 +1,7 @@
 from bpy.types.bpy_struct import bpy_struct
 from blend_data_curves import BlendDataCurves
 from blend_data_objects import BlendDataObjects
+from blend_data_meshes import BlendDataMeshes
 
 # https://docs.blender.org/api/current/bpy.types.BlendData.html
 class BlendData(bpy_struct):
@@ -25,7 +26,7 @@ class BlendData(bpy_struct):
     linestyles: any
     masks: any
     materials: any
-    meshes: any
+    meshes: BlendDataMeshes
     metaballs: any
     movieclips: any
     node_groups: any

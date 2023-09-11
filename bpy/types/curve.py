@@ -1,4 +1,4 @@
-from typing import Literal, Type
+from typing import Literal
 from id import ID
 from object import Object
 from anim_data import AnimData

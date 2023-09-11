@@ -16,3 +16,5 @@ from ui_layout import UILayout
 from struct import Struct
 from blend_data_curves import BlendDataCurves
 from bm_vert import BMVert
+from spline import Spline
+from scene import Scene

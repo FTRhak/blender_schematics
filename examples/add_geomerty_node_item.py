@@ -42,15 +42,20 @@ class MyCustomNode(bpy.types.GeometryNodeCustomGroup):
 
         self.node_tree.nodes["Group Output"].inputs[0].default_value = 30
 
+        # TODO read from input geometry - transform - put in output geometry
+
         return None
     
 
     def __createInputFields(self, ng: bpy.types.GeometryNodeTree):
         nm = self.__createInputFiled(ng, 'NodeSocketInt', 'Name of input field')
         self.__setupField(nm, 0, 100, 50)
+        self.__createInputFiled(ng, 'NodeSocketGeometry', 'Geometry input field')
+
     
     def __createOutputFields(self, ng: bpy.types.GeometryNodeTree):
         self.__createOutputFiled(ng, 'NodeSocketInt', 'Name of output field')
+        self.__createOutputFiled(ng, 'NodeSocketGeometry', 'Geometry output field')
 
     def __createInputFiled(self, ng: bpy.types.GeometryNodeTree, filedType: str, filedName: str):
         return ng.inputs.new(filedType, filedName)

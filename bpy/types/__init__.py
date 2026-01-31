@@ -18,3 +18,5 @@ from blend_data_curves import BlendDataCurves
 from bm_vert import BMVert
 from spline import Spline
 from scene import Scene
+from .operator import *
+from .property_group import *

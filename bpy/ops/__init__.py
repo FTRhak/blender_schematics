@@ -19,6 +19,8 @@ from dpaint_operators import DpaintOperators
 from ed_operators import EdOperators
 from node_operators import NodeOperators
 
+from .object import *  # noqa: F403,F401
+
 # https://docs.blender.org/api/current/bpy.ops.html
 action: ActionOperator
 anim: AnimOperators
@@ -70,7 +72,7 @@ mball: any
 mesh: any
 nla: any
 node: NodeOperators
-object: any
+#object: any
 outliner: any
 paint: any
 paintcurve: any

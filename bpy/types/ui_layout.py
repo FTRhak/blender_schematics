@@ -1,3 +1,4 @@
+from typing import Self
 from bpy.types.bpy_struct import bpy_struct
 from bpy.types.operator_properties import OperatorProperties
 
@@ -20,10 +21,10 @@ class UILayout(bpy_struct):
     use_property_split: bool
 
     def row(self, align=False, heading='', heading_ctxt='', translate=True):
-        pass
+        return self
 
     def column(self, align=False, heading='', heading_ctxt='', translate=True):
-        pass
+        return self
 
     def column_flow(self, columns=0, align=False):
         pass
@@ -32,7 +33,7 @@ class UILayout(bpy_struct):
         pass
 
     def box(self):
-        pass
+        return self
 
     def split(self, factor=0.0, align=False):
         pass
@@ -56,7 +57,7 @@ class UILayout(bpy_struct):
     def enum_item_icon(data, property, identifier):
         pass
 
-    def prop(self, data, property, text='', text_ctxt='', translate=True, icon='NONE', expand=False, slider=False, toggle=-1, icon_only=False, event=False, full_event=False, emboss=True, index=-1, icon_value=0, invert_checkbox=False):
+    def prop(self, data, property: str, text='', text_ctxt='', translate=True, icon='NONE', expand=False, slider=False, toggle=-1, icon_only=False, event=False, full_event=False, emboss=True, index=-1, icon_value=0, invert_checkbox=False):
         pass
 
     def props_enum(self, data, property):
